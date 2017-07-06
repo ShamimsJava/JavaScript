@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Factorial</title>
+</head>
+
+<body>
+	<script>
+    	function calculateFactorial(x){
+			var factorial = 1;
+			for(x; x >= 1; x--){
+				factorial *= x;
+				}
+			return factorial;
+			}
+		
+		var p = prompt("Enter A Number For Calculate Factorial","");
+		
+		document.write("The factorial of "+p+" is "+calculateFactorial(p));
+    </script>
+</body>
+</html>

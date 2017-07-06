@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sum in a series</title>
+</head>
+
+<body>
+	<script>
+    	function sumSeries(x,y){
+			var sum = 0;
+			for(x; x<=y; x++){
+				sum+=x;
+				}
+			return sum;
+			}
+		
+		var p = prompt("Please Enter First Number","");
+		var q = prompt("Please Enter Last Number","");
+		
+		document.write("The sum of "+p+" to "+q+" is "+sumSeries(parseInt(p), parseInt(q)));
+    </script>
+</body>
+</html>

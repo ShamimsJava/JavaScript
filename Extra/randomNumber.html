@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Random Number</title>
+</head>
+
+<body>
+	<h2 id="demo"></h2>
+	<script>
+    	function randomNumber(x,y){
+			var p = Math.random();
+			var q = p * (y-x+1) + x;
+			var r = Math.floor(q);
+			return r;
+			}
+		
+		var minNumber = prompt("Please Enter Minimum Number","");
+		var mn = parseInt(minNumber);
+		var maxNumber = prompt("Please Enter Maximum Number","");
+		var xn = parseInt(maxNumber);
+		
+		document.getElementById("demo").innerHTML="Your lucky number is: "+randomNumber(mn,xn);
+    </script>
+</body>
+</html>
