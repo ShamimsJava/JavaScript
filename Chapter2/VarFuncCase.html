@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cases in Variables and Functions</title>
+</head>
+
+<body>
+	<script>
+    	var Tax = 0.05;
+		function addTex(item){
+			var Total = item + (item * Tax);
+			var NewTotal = Math.floor(Total);
+			var Fraction = Math.round(Total * 100)%100;
+			if(Fraction < 10){
+				Fraction = "0" + Fraction;
+				}
+			Total = NewTotal + "." + Fraction;
+			alert("Your total is $ " + Total);
+			}
+    </script>
+    
+    <a href="#" onClick="addTex(7.22)">Click for total</a>
+</body>
+</html>

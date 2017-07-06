@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Change Image ClickOn Image</title>
+</head>
+
+<body>
+	<h2>Change Image by Clicking On Image</h2>
+    <img id="myImage" src="pic_bulboff.gif" width="100px" onClick="changeImage()">
+	<script>
+    	function changeImage(){
+			var image = document.getElementById("myImage");
+			if(image.src.match('bulbon')){
+				image.src = "pic_bulboff.gif";
+				}else{
+					image.src = "pic_bulbon.gif";
+					}
+			}
+    </script>
+    <h3>Thank You.</h3>
+</body>
+</html>
