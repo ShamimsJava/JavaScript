@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>switch, case and break</title>
+</head>
+
+<body>
+	<script>
+    	function myFunction(name){
+			switch(name){
+				case "shamim":
+					alert("You are my admin.");
+					break;
+					
+				case "urmi":
+					alert("You are very nice girl.");
+					break;
+					
+				case "rumi":
+					alert("You are cute girl.");
+					break;
+					
+				case "shohan":
+					alert("You are brilliant boy.");
+					break;
+				
+				default:
+					alert("I cannot recognize you.");
+				}
+			}
+		var x = prompt("Please Enter Your Name","");
+		var x = x.toLowerCase();
+		myFunction(x);
+    </script>
+</body>
+</html>

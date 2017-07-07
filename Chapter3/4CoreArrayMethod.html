@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array</title>
+</head>
+
+<body>
+	<script>
+    	var x = new Array("Lenny", "Harold", "Mary", "Jean", "Sal");
+		
+		document.write(x.pop()+"<br>"); // return last array value and remove last value from array
+		document.write(x+"<br>"); // returns without Sal
+		
+		document.write(x.push("Delia")+"<br>"); // return new value length and add that value in last the array
+		document.write(x+"<br>");
+		
+		document.write(x.shift()+"<br>"); // return first array value and remove first value from array
+		document.write(x+"<br>");
+		
+		document.write(x.unshift("Willie")+"<br>"); // return new value length and add that value in front the array
+		document.write(x+"<br>");
+		
+		document.write(x.splice(1,2,"Fred")+"<br>"); // return index 1 and 2 value
+		document.write(x+"<br>"); // return delete 1 and 2 index and insert Fred
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Comparision Operator</title>
+</head>
+
+<body>
+	<script>
+    	var x = 8;
+		var y = 7;
+		var z = 10;
+		var p = "8";
+		
+		document.write("1 "+(x>y)+"<br>"); //true
+		document.write("2 "+(x<y)+"<br>"); // false
+		document.write("3 "+(x==p)+"<br>"); // true
+		document.write("4 "+(x===p)+"<br>"); // false
+		document.write("5 "+(x!==p)+"<br>"); //true
+		document.write("6 "+(x>=y)+"<br>"); // true
+		document.write("7 "+(x<=y)+"<br>"); // false
+		document.write("8 "+(x>y && z>y )+"<br>"); // true
+		document.write("9 "+(x>y && z<y )+"<br>"); //false
+		document.write("10 "+(x>y || z>y )+"<br>"); //true
+		document.write("11 "+(x>y || z<y )+"<br>"); //true
+		document.write("12 "+(x!=p)+"<br>"); // false
+    </script>
+</body>
+</html>
