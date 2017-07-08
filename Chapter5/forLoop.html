@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>For Loop</title>
+</head>
+
+<body>
+	<script>
+    	var found = "Email address is missing @ symbol.";
+		var emailAd = prompt("Please Enter Your Email Address","");
+		for(var counter = 0; counter <= emailAd.length; counter++){
+			var findAt = emailAd.charAt(counter);
+				if(findAt == "@"){
+					found = "Email address has @ symbol.";
+					}
+			}
+		document.write(found);
+    </script>
+</body>
+</html>
