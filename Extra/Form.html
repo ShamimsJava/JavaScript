@@ -45,16 +45,16 @@
     
     <script>
     	function display(){
-			var x1 = document.forms.myForm.fullName.value;
+			var x1 = document.myForm.fullName.value;
 			document.getElementById("shamim1").innerHTML="Hello Mr. "+x1+".";
 			
-			var x2 = document.forms.myForm.gender.value;
+			var x2 = document.myForm.gender.value;
 			document.getElementById("shamim2").innerHTML="You are "+x2+".";
 			
-			var x3 = document.forms.myForm.country.value;
+			var x3 = document.myForm.country.value;
 			document.getElementById("shamim3").innerHTML="You are from "+x3+"."+" I know "+x3+" is a great country.";
 			
-			var x4 = document.forms.myForm.comments.value;
+			var x4 = document.myForm.comments.value;
 			document.getElementById("shamim4").innerHTML="You tell us that "+'"'+x4+'"'+". You are very good guy.Thank you.";
 			}
     </script>

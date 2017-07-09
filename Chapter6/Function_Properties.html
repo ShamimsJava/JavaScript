@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Function Properties</title>
+</head>
+
+<body>
+	<script>
+    	function bogus(xx){
+			var a = arguments.length;
+			var b = bogus.length;
+			return "This function uses "+a+" arguments, but should use "+b+" arguments."
+			}
+		document.write(bogus(3,4,5));
+    </script>
+    
+</body>
+</html>

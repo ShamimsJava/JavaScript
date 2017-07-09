@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Illustrating toString</title>
+</head>
+
+<body>
+	<script>
+    	function alpha(){
+			var hope = 12;
+			var charity = 10;
+			return hope>charity;
+			}
+		function beta(){
+			var now = 57;
+			var then = 3;
+			return now/then;
+			}
+		var header = "<h2>Functions in Strings and Numbers</h2>"
+		var indigo = alpha();
+		var denim = beta();
+		document.write(indigo+denim+"<br>")
+		
+		var boole = alpha().toString();
+		var lean = beta().toString();
+		var toStrings = boole+lean;
+		document.write(toStrings);
+    </script>
+</body>
+</html>

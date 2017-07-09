@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Focus This</title>
+</head>
+
+<body>
+	<script>
+    	function fillItIn(){
+			document.info.email.value="bill@sandlight";
+			}
+    </script>
+    <form name="info">
+    	Please enter your email address:
+        <input type="text" name="email" onFocus="fillItIn()">
+    </form>
+</body>
+</html>
