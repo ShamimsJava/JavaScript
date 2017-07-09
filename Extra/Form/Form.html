@@ -3,13 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Form</title>
-<style>
-	span{
-		font-size: 36px;
-		font-family:Verdana, Geneva, sans-serif;
-		color: purple;
-		}
-</style>
+<script src="Form.js"></script>
+<link href="Form.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,21 +37,5 @@
     <span id="shamim2"></span>
     <span id="shamim3"></span>
     <span id="shamim4"></span>
-    
-    <script>
-    	function display(){
-			var x1 = document.myForm.fullName.value;
-			document.getElementById("shamim1").innerHTML="Hello Mr. "+x1+".";
-			
-			var x2 = document.myForm.gender.value;
-			document.getElementById("shamim2").innerHTML="You are "+x2+".";
-			
-			var x3 = document.myForm.country.value;
-			document.getElementById("shamim3").innerHTML="You are from "+x3+"."+" I know "+x3+" is a great country.";
-			
-			var x4 = document.myForm.comments.value;
-			document.getElementById("shamim4").innerHTML="You tell us that "+'"'+x4+'"'+". You are very good guy.Thank you.";
-			}
-    </script>
 </body>
 </html>
