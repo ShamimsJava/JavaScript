@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>while loop</title>
+</head>
+
+<body>
+	<h2>while loop</h2>
+    <h3>General Format</h3>
+    <pre>
+    initial value declaration;
+    while(termination_condition){
+    	statements;
+        increment/decrement statement;
+    	}
+    </pre>
+	<script>
+    	var teamGroups="";
+		var counter=50;
+		while(counter>0){
+			teamGroups += "Team "+counter+"<br>";
+			counter -=5;
+			}
+		document.write(teamGroups);
+    </script>
+</body>
+</html>

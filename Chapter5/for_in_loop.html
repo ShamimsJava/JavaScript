@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>for in loop</title>
+</head>
+
+<body>
+	<h2>fon/in loop</h2>
+    <h3>General Format</h3>
+    <pre>
+    for(counter_variable in object){
+    	Statements;
+    	}
+    </pre>
+    
+	<script>
+    	var airFlock = "";
+		var airplane = new Array("Cessna", "Piper", "Maule", "Mooney", "Boeing");
+		
+		for(var counter in airplane){
+			airFlock += airplane[counter] + "<br>";
+			}
+		document.write(airFlock);
+    </script>
+</body>
+</html>
