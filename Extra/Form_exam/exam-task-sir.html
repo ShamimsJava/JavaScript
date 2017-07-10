@@ -1,0 +1,131 @@
+<!--Evidence: 
+	1. make a form like beloow
+    2. Name value not empty or less than 1 and not more than 10
+    3. validate email
+    4. open window
+    5. write form data to window using add method
+    6. close the window
+-->
+
+
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>form</title>
+<script type="text/javascript">
+
+function add(){
+with(document){
+//for name
+	/*getElementById("dis").value+=getElementById("stname").value+=getElementById("email").value;*/
+var stname=getElementById("stname").value;
+if (stname.length==0 || stname.length>10)
+{ 
+     alert("name must be 1 to 10 character");
+	return;
+}
+//for eamil
+    var email=getElementById("email").value; 
+	var i=email.indexOf('@');
+	var j=email.lastIndexOf('.');
+	if( i>0 && i<j-1)
+	{
+	 alert("valid Email");}
+ 	else
+ 	{
+ 	alert("Invalid email");
+ 		return;}
+		//for password
+		
+		
+		var pword=getElementById("pword").value;
+		if(pword.length<=5){
+		
+		alert("password is must be less 5 charecter");
+		return;
+		}
+		
+	//for hobby
+	var hobby="";
+	if (getElementById("Read").checked==true)
+	hobby+="read";
+	
+	if (getElementById("Write").checked==true)
+	hobby+="write";
+	
+	if (getElementById("Dance").checked==true)
+	hobby+="dance";
+	
+	
+	
+	//for Division
+	var division=getElementById("division").value;
+	
+	//for Course
+	var course="";
+		if (getElementById("c#").checked==true)
+	course+="c#";
+		if (getElementById("java").checked==true)
+	course+="JAVA";
+		if (getElementById("wpsi").checked==true)
+	course+="WPSI";
+	
+	
+	/*getElementById("dis").value+=stname+" "+email+" "+hobby+" "+course+" "+division;*/
+	
+		win.document.write(stname+" "+email+" "+hobby+" "+course+" "+division);
+}//end of with
+}
+
+var win;
+	
+	function winOpen(){
+	
+	win=window.open("","","width=200 height=200");
+	win.document.write("<center> window output</center>")
+	}
+	function winClose(){
+	win.close();
+	}
+
+</script>
+</head>
+
+<body>
+<form name="f">
+<pre>
+Name  :<input type="text" id="stname" />
+
+
+e-mail  :<input type="text" id="email" />
+
+Password:<input type="password" id="pword"/>
+Hobby   :
+		 Read <input type="checkbox"  id="Read"value="Read" />
+		 Write<input type="checkbox"  id="Write" value="Write" />
+		 Dance<input type="checkbox"  id="Dance"value="Dance" />
+		 
+Division:<select id="division">
+		 <option value="Dhaka" >Dhaka</option>
+		 <option value="Khulnah" >Khulna</option>
+		 <option value="Chittagong" >Chittagong</option>
+		 <option value="Rajshahi" >Rajshahi</option>
+		 <option value="Dhaka" >Dhaka</option>
+		 <option value="Rangpur" >Rangpur</option>
+		 <option value="Sylhet" >Sylhet</option>
+		 </select>
+Course:
+<input type="radio" name="course"  id="c#" value="c#" />C#
+
+<input type="radio" name="course"  id="java" value="java" />JAVA
+
+<input type="radio" name="course" id="wpsi" value="wpsi" />WPSI
+
+<!----<textarea id="dis" rows="20" cols="20"></textarea><!---->
+
+
+<input type="button" value="open" onclick="winOpen()"/> <input name="button2" type="button" value="write"/> <input name="button" type="button" value="Add" onclick="add()"/> <input type="button" value="close" onclick="winClose()"/>
+</pre>
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>do/while loop</title>
+</head>
+
+<body>
+	<script>
+    	var bigCities = new Array("Beijing", "Tokyo", "Mexico City", "New York", "Los Angeles", "London", "Barlin", "Bloomfield");
+		var counter = 0;
+		var metropolis = "";
+		bigCities.sort();
+		
+		do{
+			metropolis += bigCities[counter] + "<br>";
+			counter ++;
+			}while(counter < bigCities.length)
+		document.write(metropolis);
+    </script>
+</body>
+</html>

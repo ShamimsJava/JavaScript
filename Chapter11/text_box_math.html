@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Text Box Math</title>
+</head>
+
+<body>
+	<form name="myForm">
+    	Enter first number:
+        <input type="text" name="firstNumber"><p>
+        Enter second number:
+        <input type="text" name="secondNumber"><p>
+        <input type="button" value="Sum" onClick="add()">
+    </form>
+    
+    <script>
+    	function add(){
+			var x1 = parseFloat(document.forms[0].elements[0].value);
+			var x2 = parseFloat(document.forms[0].elements[1].value);
+			var sum = x1+x2;
+			alert("The sum is: "+sum);
+			}
+    </script>
+</body>
+</html>
