@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+	<script>
+    	var win;
+		function openWindow(){
+			win = window.open("","","width=400");
+			win.document.write("<h2><center>Form Output</center></h2><hr>");
+			}
+		
+		function closeWindow(){
+			win.close();
+			}
+			
+		function add(){
+			var name = document.myForm.name.value;
+			if(name.length==0 || name.length>20){
+				alert("Name must be 1 to 20 character");
+				return;
+				}
+			
+			var emailAd = document.myForm.email.value;
+			var i = emailAd.indexOf("@");
+			var j = emailAd.lastIndexOf(".");
+			if(i>5 || i<j-1){
+				alert("Your email is valid.");
+				}else{
+					alert("Your email is not valid.");
+					return;
+					}
+			
+			var pass = document.myForm.pass.value;
+			if(pass.length<6){
+				alert("Password must be minimum 6 character");
+				return;
+				}
+			var gender = document.myForm.gender.value;
+			var hobby="";
+			if(document.getElementById("reading").checked == true)
+				hobby += "Reading, ";
+			if(document.getElementById("writing").checked == true)
+				hobby += "Writing, ";
+			if(document.getElementById("singing").checked == true)
+				hobby += "Singing";
+			var country = document.getElementById("country").value;
+			var comment = document.myForm.comment.value;
+			
+			win.document.write("Your name is: "+name+"<br>");
+			win.document.write("Your email is: "+emailAd+"<br>");
+			win.document.write("Your password is: "+pass+"<br>");
+			win.document.write("Your gender is: "+gender+"<br>");
+			win.document.write("Your hobbies are: "+hobby+"<br>");
+			win.document.write("Your country is: "+country+"<br>");
+			win.document.write("Your comment is: "+comment+"<br>");
+			}
+    </script>
+</head>
+
+<body>
+	<form name="myForm">
+    	Name: 
+        <input type="text" id="name"><p>
+        
+        Email: 
+        <input type="email" id="email"><p>
+        
+        Password: 
+        <input type="password" id="pass"><p>
+        
+        Gender: 
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<p>
+        
+        Hobby: 
+        <input type="checkbox" id="reading">Reading
+        <input type="checkbox" id="writing">Writing
+        <input type="checkbox" id="singing">Singing<p>
+        
+        Country: 
+        <select id="country">
+        	<option value="Bangladesh">Bangladesh</option>
+            <option value="USA">USA</option>
+            <option value="England">England</option>
+            <option value="Canada">Canada</option>
+            <option value="Germany">Germany</option>
+        </select><p>
+        
+        Comment:
+        <textarea name="comment">It is sample comments.........</textarea>
+        <button type="reset">Clear</button>
+    </form>
+    <button onClick="openWindow()">Open Window</button>
+    <button onClick="add()">Add</button>
+    <button onClick="closeWindow()">Close Window</button>
+</body>
+</html>
