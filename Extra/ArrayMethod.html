@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array Method</title>
+</head>
+<body>
+	<h2>All Array Method in JavaScript</h2>
+	<script>
+    	var array = [0,5,2,3,4,1,6,7,8,9];
+		var array2 = ["A", "B", "C"];
+		document.write(array.slice(1,5)+"<br>"); // 1 is starting point and 5 is ending point
+		document.write(array.slice(5)+"<br>"); // 5 is starting point
+		document.write(array.slice(-2)+"<br>");
+		document.write(array.length+"<br>");
+		document.write(array.reverse()+"<br>");
+		document.write(array.sort()+"<br>");
+		document.write(array.pop()+"<br>"); // return last element and delating
+		document.write(array+"<br>");
+		document.write(array.push(9)+"<br>"); // return length adding an element as last element
+		document.write(array+"<br>");
+		document.write(array.shift()+"<br>"); // return 0 and remove first array
+		document.write(array+"<br>");
+		document.write(array.unshift(0)+"<br>"); //return length and adding an element as first element
+		document.write(array.splice(0, 3, "Shamim")+"<br>"); // 0 is starting point, 3 is how many I want remove, Shamim is adding element
+		document.write(array+"<br>");
+		document.write(delete array[0]+"<br>"); // is operator
+		document.write(array+"<br>");
+		var array3 = array.concat(array2);
+		document.write(array3+"<br>");
+		document.write(typeof(array3)+"<br>");
+		document.write(Array.isArray(array3)+"<br>");
+		var x = array3 instanceof Array;
+		document.write(x+"<br>");
+    </script>
+</body>
+</html>
