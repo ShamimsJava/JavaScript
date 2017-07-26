@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Navigator Properties</title>
+</head>
+
+<body bgcolor="#99FF99">
+	<script>
+    	var nav = new Array(5);
+		nav[0] = "Code name = "+ self.navigator.appCodeName + "<br>";
+		nav[1] = "Browser name = "+ self.navigator.appName + "<br>";
+		nav[2] = "Version number = "+ self.navigator.appVersion + "<br>";
+		nav[3] = "Platform name = "+ self.navigator.platform + "<br>";
+		nav[4] = "User agent name = "+ self.navigator.userAgent + "<br>";
+		
+		var display = "<h2>Navigator Information</h2>";
+		for(var i = 0; i < nav.length; i++){
+			display += nav[i];
+			}
+		document.write(display);
+    </script>
+</body>
+</html>

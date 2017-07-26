@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Building Objects</title>
+</head>
+<body>
+	<script>
+    	var acme = new Object(); //creating a object
+		acme.management = "Management coordinates everything.";
+		acme.management = new Object(); // creating a new object
+		acme.management.rand = "Research and Development works to develop new and better products and services.";
+		acme.finance = "Finance keeps track of the money";
+		acme.production = "Production makes the stuff.";
+		acme.marketing = "Marketing develops strategies to target markets for the producnts.";
+		acme.marketing = new Object();
+		acme.marketing.sales = "Sales contacts potential clients ans sells the product.";
+		acme.fulfillment = "Fulfillment delivers sold products.";
+		
+		var display = "<h2>Properties of the acme object.</h2>";
+		for(var counter in acme){
+			display += counter +", ";
+			}
+		display += "<h2>Properties of the window object.</h2>";
+		for(var counter in window){
+			display += counter +", ";
+			}
+		display += "<h2>Properties of the document object.</h2>";
+		for(var counter in document){
+			display += counter +", ";
+			}
+		display += "<h3>And now the values of the properties of management and marketing</h3>";
+		display += acme.management.rand + "<br>";
+		display += acme.marketing.sales;
+		document.write(display);
+    </script>
+</body>
+</html>

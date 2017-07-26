@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>Check Prime</title>
+<script>
+	function checkPrime(x){
+		var n = Math.sqrt(x);
+		var counter = 2;
+		for(counter; counter <= n; counter++){
+			if(x%counter == 0){
+				return false;
+				}else{}
+			}
+			return true;
+		}
+		
+	function buttonClick(){
+		var number = prompt("Please Enter a number.","");
+		if(number !=0 && number != 1){
+			if(checkPrime(number)){
+				document.getElementById("demo").innerHTML = number + " is prime.";
+				}else{
+					document.getElementById("demo").innerHTML = number + " is not prime.";
+					}
+			}else{
+				document.getElementById("demo").innerHTML = number + " is not prime.";
+				}
+		}
+	
+	function factorial(){
+		var f = prompt("Enter a number","");
+		fact = 1;
+		for(f; f>=1; f--){
+			fact *= f;
+			}
+		document.getElementById("demo2").innerHTML = "The factorial is: "+ fact;
+		}	
+
+</script>
+
+</head>
+<body>
+	<h2>Checking Prime Number</h2>
+    <button onClick="buttonClick()">Prime Number</button>
+    <h3 id="demo">Prime Number or Not Prime Numebr</h3>
+    <h2>Evaluating Factorial</h2>
+    <button onClick="factorial()">Factorial</button>
+    <h3 id="demo2">Factorial</h3>
+</body>
+</html>

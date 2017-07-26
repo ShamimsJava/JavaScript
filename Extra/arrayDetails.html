@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array Details</title>
+</head>
+
+<body>
+	<script>
+    	var x1 = new Array(); // Using Array constructor
+		x1[0] = 0;
+		x1[1] = 1;
+		x1[2] = 2;
+		document.write(x1+"<br>");
+		
+		var x2 = new Array(3,4,5); // Using Array constructor
+		document.write(x2+"<br>");
+		
+		var x3 = [6,7,8]; // Using Literal
+		document.write(x3+"<br>");
+		
+		var x4 = [9]; // Assign value using push() method
+		x4.push(10);
+		x4.push(11);
+		x4.push(12);
+		document.write(x4+"<br>");
+		
+		var x5 = [13]; // Assign value using unshift() method
+		x5.unshift(14);
+		x5.unshift(15);
+		x5.unshift(16);
+		document.write(x5+"<br>");
+		
+		var x6 = [17]; // Assign value using length property
+		x6[x6.length] = 18;
+		x6[x6.length] = 19;
+		x6[x6.length] = 20;
+		document.write(x6+"<br>");
+    </script>
+</body>
+</html>
