@@ -24,7 +24,7 @@
 			var emailAd = document.myForm.email.value;
 			var i = emailAd.indexOf("@");
 			var j = emailAd.lastIndexOf(".");
-			if(i>5 || i<j-1){
+			if(i>5 && i<j-1){
 				alert("Your email is valid.");
 				}else{
 					alert("Your email is not valid.");
