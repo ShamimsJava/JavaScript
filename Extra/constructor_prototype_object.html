@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object Creation</title>
+</head>
+
+<body>
+<script>
+	function Person(first, last, age){ //Person is a constructor function, it is also a prototype
+		this.firstname = first; // this keyword refers current object.
+		this.lastname = last; //Every JavaScript object has a prototype. The prototype is also an object.
+		this.age = age;
+		}
+	var myFather = new Person("Aminur", "Islam", 50); //calling the Person() constructor function and
+	var myMother = new Person("Shamsun", "Naher", 45); // inherit the properties and method from Person prototype. All JavaScript objects inherit their properties and methods from their prototype.
+	
+	document.write(myFather.firstname);
+	
+	// NOTE: The constructor function is the prototype for Person objects. It is considered good practice to name constructor function with an upper-case first letter.
+</script>
+</body>
+</html>
