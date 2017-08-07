@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Push Pop Array</title>
+<script>
+	var fruits = ["Red", "Yellow", "Green", "Blue"];
+	document.getElementById("demo").innerHTML=fruits;
+	function pop_element(){
+		fruits.pop();
+		document.getElementById("demo").innerHTML=fruits;
+		}
+	function push_element(){
+		fruits.push("Black", "White", "Orange");
+		document.getElementById("demo").innerHTML=fruits;
+		}
+</script>
+</head>
+
+<body>
+	<p>Click the button to remove the last element from the array.</p>
+    <button onClick="pop_element()">POP Element</button>
+    <button onClick="push_element()">PUSH Element</button>
+    <p id="demo"></p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<script>
+	function form(){
+		var a = document.this_form.name.value;
+		if(a==null || a==""){
+			alert("Enter your name");
+			return false;
+			}
+			
+		var b = document.this_form.address.value;
+		if(b==null || b==""){
+			alert("Enter your address");
+			return false;
+			}
+		
+		var c = document.this_form.age.value;
+		if(c==null || c==""){
+			alert("Enter your age");
+			return false;
+			}
+		
+		var data = document.this_form.email.value;
+		var j = data.indexOf('@');
+		var i = data.indexOf('.');
+		var diff = parseInt(i) + parseInt(j);
+		var k = parseInt(j)+1;
+		var c = data.charAt(k);
+		if(i<1 || diff<=1 || c==""){
+			alert("Invalid email address");
+			document.this_form.email.focus();
+			}
+			
+		if((this_form.gender.checked==false) && (this_form.gender.checked==false)){
+			alert("Select Gender");
+			}
+		}
+</script>
+</head>
+
+<body>
+	<form name="this_form" action="#" method="get">
+    	Name: <input type="text" name="name"><p>
+        Age: <input type="text" name="age"><p>
+        Address: <input type="text" name="address"><p>
+        Email Address: <input type="text" name="email"><p>
+        Gender: <input type="radio" name="gender">Female<input type="radio" name="gender">Male<p>
+        You live in:
+        <select name="country" size="1">
+        	<option value="India">India</option>
+            <option value="aus">Australia</option>
+            <option value="china">China</option>
+            <option value="japan">Japan</option>
+            <option value="russia">Russia</option>
+        </select><p>
+        <input type="submit" name="submit" value="Submit" onClick="form()">
+    </form>
+</body>
+</html>
