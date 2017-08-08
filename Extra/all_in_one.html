@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+<style>
+	#container{
+		width:700px;
+		height:auto;
+		background:orange;
+		margin:25px auto;
+		padding: 25px;
+		}
+</style>
+<script>
+	var win;
+	function openWindow(){
+		win = window.open("","","width=400");
+		win.document.write("<h2>Form output</h2><hr>");
+		win.document.bgColor="skyblue";
+		}
+	function closeWindow(){
+		win.close();
+		}
+	function add(){
+		var name = document.myForm.name.value;
+		if(name.length<10){
+			alert("Name must be greater than 10 character.");
+			}
+		var email = document.myForm.email.value;
+		var i = email.indexOf('@');
+		var j = email.lastIndexOf('.');
+		if(i==null || j==null || j<i+2 || i<5){
+			alert("Your email is not valid.");
+			return;
+			}else{
+				alert("Your email is valid.");
+				}
+		
+		win.document.write("Your name is: "+name+"<br>");
+		win.document.write("Your email is: "+email+"<br>");
+		}
+	function checkprm(){
+		function checkPrime(p){
+			var n = Math.sqrt(p);
+			var i = 2;
+			for(i; i<=n; i++){
+				if(p%i==0)
+					return false;
+				}
+				return true;
+			}
+			var p = prompt("Enter a number for checking prime","");
+			if(p!=0 && p!=1){
+				if(checkPrime(p)){
+					alert(p+" is prime number.");
+					}else{
+						alert(p+" is not prime number.");
+						}
+				}else{
+					alert(p+" is not prime number.");
+					}
+		}
+		
+	function factrl(){
+		function factorial(f){
+			var fact = 1;
+			for(f; f>=1; f--){
+				fact *=f;
+				}
+			return fact;
+			}
+		var f = prompt("Enter a number for factorial","");
+		alert("The factorial is: "+factorial(f));
+		}
+	
+	function sum(){
+		function total(s,e){
+			var result = 0;
+			for(s; s<=e; s++){
+				result +=s;
+				}
+			return result;
+			}
+		var s = prompt("Enter the lower limit","");
+		var e = prompt("Enter the upper limit","");
+		alert("The sum is: "+total(parseInt(s),parseInt(e)));
+		}
+		
+	function oddeven(){
+		function odev(o){
+			if(o==0){
+				alert(o+" is nutral number");
+				}else if(o%2==0){
+					alert(o+" is even number");
+					}else{
+						alert(o+" is odd number");
+						}
+			}
+		var o = prompt("Enter a number for checking odd or even","");
+		odev(o);
+		}	
+	
+</script>
+</head>
+
+<body>
+<div id="container">
+<h2><center>Evidence Exam<br>IDB-BISEW<br>Md. Shamim Sarker</center></h2><hr>
+<form name="myForm">
+	Name:
+    <input type="text" name="name" value="Shamim Sarker"><p>
+    Email:
+    <input type="email" name="email" value="shamimsjava@gmail.com"><p>
+    <button type="reset">Reset</button>
+</form>
+
+<button onClick="openWindow()">Open</button>
+<button onClick="add()">Add</button>
+<button onClick="closeWindow()">Close</button><p><hr>
+
+<h2><center>For Background Color Change</center></h2>
+<button onClick="document.bgColor='red'">Red</button>
+<button onClick="document.bgColor='green'">Green</button>
+<button onClick="document.bgColor='pink'">Pink</button>
+<button onClick="document.bgColor='wheat'">Wheat</button>
+<button onClick="document.bgColor='skyblue'">Skyblue</button>
+<button onClick="document.bgColor='blue'">Blue</button>
+<button onClick="document.bgColor='yellow'">Yellow</button>
+<button onClick="document.bgColor='violet'">Violet</button>
+<button onClick="document.bgColor='purple'">Purple</button>
+<button onClick="document.bgColor='#ffffff'">White</button><hr>
+<h2><center>Other Problems</center></h2>
+<button onClick="checkprm()">Check Prime</button>
+<button onClick="factrl()">Factorial</button>
+<button onClick="sum()">Sum</button>
+<button onClick="oddeven()">Odd Even</button><hr>
+<footer>&copy; All rights reseved by Md. Shamim Sarker.</footer>
+</div>
+</body>
+</html>
